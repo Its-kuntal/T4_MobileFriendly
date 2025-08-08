@@ -97,6 +97,38 @@ img {
     transform: translateY(-2px);
 }
 
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem;
+    }
+
+    .header-nav {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .logo-container {
+        gap: 0.5rem;
+    }
+
+    .main-title {
+        font-size: 1.25rem;
+    }
+}
+
 
 
 /* ========================================
@@ -128,6 +160,7 @@ img {
 .main-content {
     display: flex;
     gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .content-column {
@@ -135,7 +168,8 @@ img {
     padding: 2rem;
     border-radius: 16px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-    width: 33.333%;
+    flex: 1;
+    min-width: 300px;
     transition: var(--transition);
 }
 
@@ -220,6 +254,73 @@ img {
 .social-links a:hover {
     color: var(--primary-color);
     transform: translateY(-3px);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 1024px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-section {
+        padding: 3rem 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        gap: 1.5rem;
+    }
+    
+    .content-column {
+        flex: 100%;
+        min-width: 100%;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .footer-content {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .hero-section {
+        padding: 2rem 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-title {
+        font-size: 1.75rem;
+    }
+
+    .content-column {
+        padding: 1.5rem;
+    }
+
+    .feature-icon {
+        font-size: 2rem;
+    }
+
+    .column-title {
+        font-size: 1.25rem;
+    }
 }
 
 
